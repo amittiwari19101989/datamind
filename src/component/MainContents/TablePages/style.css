@@ -1,0 +1,150 @@
+.tableSec{
+    margin: 50px 0 20px;
+}
+.tableContent{
+    background: #1C1C1C;
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    backdrop-filter: blur(10px);
+}
+.tableContent table{
+    width: 100%;
+}
+.tableContent table th, .tableContent table td{
+    padding: 10px 5px;
+    text-align: center;
+}
+.tableContent table th{
+    color: #fff;
+    text-transform: capitalize;
+    color: #a5a5a5;
+    font-size: 13px;
+    line-height: 20px;
+}
+.tableContent table td{
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    color: #f1f1f1;
+}
+.tableContent table td:first-child{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 100px;
+}
+.tableContent table tbody tr:nth-child(even){
+    background-color: rgb(84, 84, 84 , 17%);
+}
+.tableContent table tbody tr{
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+}
+/* .tableContent table tbody tr:hover{
+    background-color: #ff7e91;
+    transform: scale(1.02);
+    color: #fff;
+} */
+.tableContent .tableHeading{
+    color: #fff;
+    font-size: 22px;
+    line-height: 26px;
+}
+.rightSizingBtnSec{
+    display: flex;
+    justify-content: right;
+}
+.right-sizing-btn{
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    border: 1px solid #822b8f;
+    background-color: #822b8f;
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.30s;
+    outline: none;
+    margin-bottom: 20px;
+}
+.right-sizing-btn:hover{
+    border: 1px solid #822b8f;
+    background-color: transparent;
+    color: #fff;
+}
+.editBtn {
+    max-width: 22px;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+.editBtn img {
+    height: 100%;
+    width: 100%;    
+}
+.editableInput{
+    max-width: 100px;
+    background-color: transparent;
+    color: #fff;
+    border: 0;
+    padding: 2px 10px;
+    /* background-color: #000; */
+    outline: 0;
+    border-radius: 3px;
+    box-shadow: rgb(0,0,0,49%) 0px 30px 60px -12px inset, rgb(0,0,0,47%) 0px 18px 36px -18px inset
+}
+
+.staticTable .tableContent tbody tr:first-child{
+    display: none;
+}
+
+.pieChartSec {
+    display: flex;
+    gap: 20px;
+}
+.pieBeforeImage{
+    max-width: 300px;
+    width: 100%;
+}
+.pieChartSec .chartHeading{
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+}
+.graphCostPath{
+    max-width: 600px;
+    width: 100%;
+}
+
+.pieAfterImage{
+    max-width: 300px;
+    width: 100%;
+}
+
+.pieImages img{
+    width: 100%;
+    border: 1px solid #822b8f;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgb(0,0,0,49%) 0px 30px 60px -12px inset, rgb(0,0,0,47%) 0px 18px 36px -18px inset
+}
+.barchartSec{
+    display: flex;
+    justify-content: space-between;
+}
+.barchartSec h2{
+    font-size: 16px;
+    color: #fff;
+    display: block;
+}

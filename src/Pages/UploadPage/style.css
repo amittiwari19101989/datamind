@@ -1,0 +1,139 @@
+
+.uploadpage-content{
+    height: 100vh;
+    padding: 50px 10px;
+}
+.uploadPageForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-input-container{
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px dashed #131313;
+    z-index: 9;
+    background: #b8b8b882;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    width: 700px;
+    height: 100%;
+    padding: 20px 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.svgImg {
+    max-width: 200px;
+    width: 100%;
+    display: block;
+}
+.svgImg svg{
+    width: 100%;
+    height: 100%;
+    fill: #ff9b89;
+}
+.inputFileUpload{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0  ;
+}
+.upload-btn-label{   
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+}
+.inputFileContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.uploadBtn-sec{
+    margin: 30px auto 0;   
+}
+.upload-btn{
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    border: 1px solid #d1d1d1;
+    background-color: #ff9b89;
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.30s;
+    
+}
+.upload-btn:hover{
+    background-color: transparent;
+    color: #000;
+    transition: all 0.30s;
+    border: 1px solid #868686;
+}
+.fileNameUploaded{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+}
+
+
+.hostCountTable{
+    max-width: 700px;
+    margin: 0 auto;                 
+    box-shadow: 0 7px 14px rgba(55,55,66,.04), 4px 18px 20px rgba(0,0,0,.09), 2px -3px 12px 8px rgba(55,55,66,.04);
+    border-width: 0;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    background: #fff9ed url("../../assets/pattern.png") no-repeat;
+
+}
+.hostCountTable table{
+    width: 100%;
+    /* padding: 5px; */
+    text-align: center;
+}
+.hostCountTable table th{
+    border-bottom: 1px solid rgb(206, 206, 206);;
+    color: rgba(13,27,62,.7);
+    font-weight: 700;
+    font-size: 16px;
+}
+.hostCountTable table td, .hostCountTable table th{
+    padding: 5px;
+}
+.hostCountTable table td{
+    font-weight: 700;
+    font-size: 14px;
+}
+.hostCountTable table tr:nth-child(even){
+    background-color: #ea1b3d;
+    color: #fff;
+}
+.hostCountTable table tbody tr:hover{
+    background-color: #2f2f39;
+    color: #fff;
+    transition: all .5s;
+}
+.hostCountTable .tableHeading{
+    text-transform: uppercase;
+    color: rgba(13,27,62,.7);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px ;
+    margin: 0;
+}
+
+
+
