@@ -10,9 +10,7 @@ const Table = () => {
   const [editableRow, setEditableRow] = useState(null);
   const [editValue, setEditValue] = useState('');
   const [dynamicTableData, setDynamicTableData] = useState([]);
-  const [pieBeforeImage, setPieBeforeImage] = useState(null);
-  const [pieAfterImage, setPieAfterImage] = useState(null);
-  const [graphCostPath, setGraphCostPath] = useState(null);
+
 
   const visibleColumns = [
     'id',
@@ -88,21 +86,16 @@ const Table = () => {
         },
       });
   
-     const responseData = uploadResponse.data;
+     const responseData = uploadResponse.first_page_data;
 
-      if (responseData && responseData.data) {
-        const parsedData = JSON.parse(responseData.data);
+      if (responseData && responseData.first_page_data) {
+        const parsedData = JSON.parse(responseData.first_page_data);
 
         if (Array.isArray(parsedData)) {
           console.log('Parsed Data:', parsedData);
           setDynamicTableData(parsedData);
           
-          // Check if the response contains images
-          if (responseData.pie_before && responseData.pie_after && responseData.graph_cost_path) {
-            setPieBeforeImage(responseData.pie_before);
-            setPieAfterImage(responseData.pie_after);
-            setGraphCostPath(responseData.graph_cost_path);
-          }
+         
         } else {
           console.error('Invalid data format. Expected an array.');
         }
@@ -210,29 +203,7 @@ const Table = () => {
           </div>
         </div>
         
-        {/* Charst sections */}
-        <div className='barchartSec'>
-          <div className='pieChartSec'>          
-            {pieBeforeImage && (
-              <div className='pieBeforeImage pieImages'>
-                <p className='chartHeading'>Cloud Estimation</p>
-                <img src={`data:image/png;base64, ${pieBeforeImage}`} alt="Pie Chart Before" />
-              </div>
-            )}
-            {graphCostPath && (
-              <div className='graphCostPath pieImages'>
-                <p className='chartHeading'>Cost Saving Per Day</p>
-                <img src={`data:image/png;base64, ${graphCostPath}`} alt="graph Cost Path" />
-              </div>
-            )}
-            {pieAfterImage && (
-              <div className='pieAfterImage pieImages'>
-                <p className='chartHeading'>Rightsized Cloud Estimation</p>
-                <img src={`data:image/png;base64, ${pieAfterImage}`} alt="Pie Chart After" />
-              </div>
-            )}
-          </div>
-        </div>
+      
       </div>
     </>
   );

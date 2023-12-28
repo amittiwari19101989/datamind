@@ -21,7 +21,9 @@ const ResultPage = ({ tableData }) => {
       ];
 
     const [firstTableData, setFirstTableData] = useState(tableData)
-    
+
+    console.log("tableData",tableData)
+
   return (
     <>
       <div className="main-wrapper" >
@@ -50,26 +52,16 @@ const ResultPage = ({ tableData }) => {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td> <Link to="/secondpage"> AWS</Link></td>
-                          <td>10</td>
-                          <td>100$</td>
-                        </tr>
-                        <tr>
-                          <td>GCP</td>
-                          <td>10</td>
-                          <td>130$</td>
-                        </tr>
-                        <tr>
-                          <td>On-prem</td>
-                          <td>15</td>
-                          <td>120$</td>
-                        </tr>
-                        <tr>
-                          <td>Azure</td>
-                          <td>9</td>
-                          <td>80$</td>
-                        </tr>
+                        {Object.entries(firstTableData.cloud_count).map(([host, count]) => (
+                          <tr key={host}>
+                            <td>
+                              <Link to="/secondpage">{host}</Link>
+                            </td>
+                            <td>{count}</td>
+                            {/* Assuming the cloud_total_cost object has the same structure */}
+                            <td>{firstTableData.cloud_total_cost[host]}</td>
+                          </tr>
+                        ))}
                       </tbody>
                     </table>
                   </div>
