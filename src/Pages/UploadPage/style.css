@@ -197,3 +197,23 @@
     padding: 10px;
     margin: 0;
 }
+
+.rightSizingBtn{
+    display: flex;
+    margin: 50px 0;
+    justify-content: right;
+}
+.rightSizingBtn button{
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #ea1b3d;
+    background-color: #ea1b3d;
+    color: #fff;
+    font-weight: 600;
+    transition: all .5s;
+}
+.rightSizingBtn button:hover{
+    background-color: transparent;
+    color: #ea1b3d;
+    transition: all .5s;
+}
