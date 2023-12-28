@@ -25,11 +25,13 @@ const ResultPage = ({ tableData }) => {
   return (
     <>
       <div className="main-wrapper" >
-        <div className='video-sec'>
-          <video className='' autoPlay loop muted>
-              <source src={video} type='video/mp4' />            
-          </video>  
-        </div>      
+        <div class="custom-layout-video-section">
+          <div className='video-sec custom-video-section'>
+            {/* <video className='' autoPlay loop muted>
+                <source src={video} type='video/mp4' />            
+            </video>   */}
+          </div>
+        </div>
         {/* <pre>{JSON.stringify(tableData.first_page_data, null, 2)}</pre> */}
         <div className='FirstPage'>
           {/* <video src={video}></video> */}
