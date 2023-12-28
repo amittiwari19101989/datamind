@@ -94,27 +94,31 @@ const SecondPage = () => {
             </div>  
 
             <div className='finalizeDataSec'>
-              <div className='leftList'></div>
+              <div className='leftList'>
+                <div className='costList'>
+                  
+                </div>
+              </div>
               <div className='graphSec'>
-              <BarChart
-                  width={500}
-                  height={300}
-                  data={data}
-                  margin={{
-                    top: 5,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                  }}
-                >
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip />
-                  <Legend />
-                  <Bar dataKey="totalcost" fill="#2C71AA" activeBar={<Rectangle fill="#81b8e5"  />} />
-                  <Bar dataKey="whenmove" fill="#8F5D8E" activeBar={<Rectangle fill="#db86d9" />} />
-                  <Bar dataKey="whennotmove" fill="#C9305C" activeBar={<Rectangle fill="#ff98b5"  />} />
+                <BarChart
+                    width={500}
+                    height={300}
+                    data={data}
+                    margin={{
+                      top: 5,
+                      right: 30,
+                      left: 20,
+                      bottom: 5,
+                    }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Bar dataKey="totalcost" fill="#2C71AA" activeBar={<Rectangle fill="#003a6a"  />} />
+                    <Bar dataKey="whenmove" fill="#8F5D8E" activeBar={<Rectangle fill="#9f009b" />} />
+                    <Bar dataKey="whennotmove" fill="#C9305C" activeBar={<Rectangle fill="#9f0330"  />} />
                 </BarChart>
               </div>
               <div className='rightList'></div>
