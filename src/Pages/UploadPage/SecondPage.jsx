@@ -113,8 +113,8 @@ const SecondPage = () => {
                   <Tooltip />
                   <Legend />
                   <Bar dataKey="totalcost" fill="#2C71AA" activeBar={<Rectangle fill="#81b8e5"  />} />
-                  <Bar dataKey="whenmove" fill="#8F5D8E" activeBar={<Rectangle fill="gold" />} />
-                  <Bar dataKey="whennotmove" fill="#C9305C" activeBar={<Rectangle fill="blue"  />} />
+                  <Bar dataKey="whenmove" fill="#8F5D8E" activeBar={<Rectangle fill="#db86d9" />} />
+                  <Bar dataKey="whennotmove" fill="#C9305C" activeBar={<Rectangle fill="#ff98b5"  />} />
                 </BarChart>
               </div>
               <div className='rightList'></div>
