@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import editicon from "../../../assets/editicon.svg"
-import saveicon from "../../../assets/saveicon.svg"
+
 
 const TableOne = ({tableData, setUpdatedFunction}) => {
 
@@ -89,11 +88,11 @@ const TableOne = ({tableData, setUpdatedFunction}) => {
                     <td>
                       {editableRow !== rowIndex ? (
                         <button className='editBtn' onClick={() => startEditing(rowIndex)}>
-                          <img src={editicon} alt="" />
+                          {/* <img src={editicon} alt="" /> */}
                         </button>
                       ) : (
                         <button className='editBtn' onClick={stopEditing}>
-                            <img src={saveicon} alt="" />
+                            {/* <img src={saveicon} alt="" /> */}
                         </button>
                       )}
                     </td>

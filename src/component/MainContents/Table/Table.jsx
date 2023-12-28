@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Testfile from "./test_dataset.csv";
 import Papa from 'papaparse';
 import "../TablePages/style.css";
-import editicon from "../../../assets/editicon.svg"
-import saveicon from "../../../assets/saveicon.svg"
+
 import axios from 'axios';
 
 const Table = () => {
@@ -163,12 +162,12 @@ const Table = () => {
                             className='editBtn'
                             onClick={() => startEditing(rowIndex, row[1])}
                           >
-                            <img src={editicon} alt="" />
+                            {/* <img src={editicon} alt="" /> */}
                           </button>
                         ) : (
                           <>
                             <button className='editBtn' onClick={() => handleSave(rowIndex)}>
-                              <img src={saveicon} alt="" />
+                              {/* <img src={saveicon} alt="" /> */}
                             </button>
                           </>
                         )}

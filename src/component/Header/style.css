@@ -1,5 +1,6 @@
 .header-sec{
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .header-content{
@@ -9,7 +10,7 @@
 }
 
 .logo-sec{
-    max-width: 200px;
+    max-width: 100px;
     width: 100%;
 }
 .logo-sec img{

@@ -1,6 +1,9 @@
 import React from 'react'
 import "./style.css"
 import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';  
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import Header from '../../component/Header/Header';
+
 
 const SecondPage = () => {
   const data = [
@@ -18,6 +21,8 @@ const SecondPage = () => {
   return (
     <>
         <div className='wrapper'>
+          <Header />
+          <div className='custContainer'>
           <div className='hostCountTableSec'>
             <div className='hostCountTable'>              
               <h2 className='tableHeading'>Host Data</h2>
@@ -55,8 +60,44 @@ const SecondPage = () => {
             </div>
 
             <div className='rightSizingBtn'>
-              <button>Right Sizing</button>
+              <button >Right Sizing</button>
             </div>
+
+            <div className='hostCountTable'>              
+              <h2 className='tableHeading'>Host Data</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Host</th>
+                    <th>Count</th>
+                    <th>Total Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>AWS</td>
+                    <td>10</td>
+                    <td>100$</td>
+                  </tr>
+                  <tr>
+                    <td>AWS</td>
+                    <td>10</td>
+                    <td>130$</td>
+                  </tr>
+                  <tr>
+                    <td>AWS</td>
+                    <td>15</td>
+                    <td>120$</td>
+                  </tr>
+                  <tr>
+                    <td>AWS</td>
+                    <td>9</td>
+                    <td>80$</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>  
+
 
             <div className='hostCountTable'>              
               <h2 className='tableHeading'>Host Data</h2>
@@ -96,7 +137,14 @@ const SecondPage = () => {
             <div className='finalizeDataSec'>
               <div className='leftList'>
                 <div className='costList'>
-                  
+                    <h4>When not moving then right size cost</h4>
+                    <ul className='costListSec'>
+                      <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
+                      <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
+                      <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
+                      <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
+                      
+                    </ul>
                 </div>
               </div>
               <div className='graphSec'>
@@ -121,8 +169,21 @@ const SecondPage = () => {
                     <Bar dataKey="whennotmove" fill="#C9305C" activeBar={<Rectangle fill="#9f0330"  />} />
                 </BarChart>
               </div>
-              <div className='rightList'></div>
+              <div className='rightList'>
+                <div className='costList'>
+                    <h4>When not moving then right size cost</h4>
+                    <ul className='costListSec'>
+                      <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
+                      <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
+                      <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
+                      <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
+                      <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
+                     
+                    </ul>
+                </div>
+              </div>
             </div>
+          </div>
           </div>
         </div>
     </>

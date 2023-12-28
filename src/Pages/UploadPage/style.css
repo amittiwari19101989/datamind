@@ -99,7 +99,7 @@
     border-radius: 5px;
     padding-bottom: 10px;
     background: #fff9ed url("../../assets/pattern.png") no-repeat;
-
+    margin-bottom: 50px;
 }
 .hostCountTable table{
     width: 100%;
@@ -200,7 +200,7 @@
 
 .rightSizingBtn{
     display: flex;
-    margin: 50px 0;
+    margin: 10px 0 50px;
     justify-content: right;
 }
 .rightSizingBtn button{
@@ -216,4 +216,53 @@
     background-color: transparent;
     color: #ea1b3d;
     transition: all .5s;
+}
+
+.finalizeDataSec{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    gap: 20px;
+}
+
+.finalizeDataSec .costList{
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 7px 14px rgba(55,55,66,.04), 4px 18px 20px rgba(0,0,0,.09), 2px -3px 12px 8px rgba(55,55,66,.04);
+    border-width: 0;
+    border-radius: 5px;
+    padding:  10px;
+    background: #fff9ed url("../../assets/pattern.png") no-repeat;
+}
+
+.finalizeDataSec .costList h4{
+    text-transform: uppercase;
+    color: rgba(13,27,62,.7);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px ;
+    margin: 0;
+}
+.finalizeDataSec .graphSec{
+    box-shadow: 0 7px 14px rgba(55,55,66,.04), 4px 18px 20px rgba(0,0,0,.09), 2px -3px 12px 8px rgba(55,55,66,.04);
+    border-width: 0;
+    border-radius: 5px;
+    padding:  10px;
+    background: #fff9ed  no-repeat;
+}
+
+.costListSec{
+    list-style: none;
+}
+.costListSec li{
+    color: rgba(13,27,62,.7);
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+.costListSec li .iconsSec svg{
+    fill: green;
+    font-size: 20px;
+    margin-right: 5px;
 }

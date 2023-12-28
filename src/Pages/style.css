@@ -4,10 +4,14 @@
     padding-bottom: 50px;
     background-color: #fff9ed;
     z-index: 1;
-    padding: 30px 20px;
+    padding: 0px 20px;
 }
 
 
 .main-page-data{
     height: 100%;
+}
+
+.custContainer{
+    padding: 0px 50px;
 }
