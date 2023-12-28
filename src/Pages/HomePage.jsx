@@ -4,6 +4,7 @@ import "./style.css"
 import Tablepage from '../component/MainContents/TablePages/Tablepage'
 import { useLocation } from 'react-router-dom';
 import Table from '../component/MainContents/Table/Table';
+import ResultPage from './UploadPage/ResultPage';
 
 const HomePage = () => {
 
@@ -12,14 +13,13 @@ const HomePage = () => {
 
   return (
     <>
-      <div className='wrapper'>        
+      <div className=''>        
         <div className='homePage-sec'>
           {/* <Header /> */}
-          <div className='main-page-data'>
-            <div className='container'>
-              <Tablepage tableData={tableData}/>
-            </div>
-          </div>
+        
+              <ResultPage tableData={tableData}/>
+              {/* <Table /> */}
+            
         </div>  
       </div>       
     </>

@@ -16,7 +16,7 @@ const TableOne = ({tableData, setUpdatedFunction}) => {
     'Total Disk Space (GB)',
     'Cpu Utilization',
     'Network Latency (milliseconds)',
-    'Cost per Day ($)',
+    'Cost per Day',
     'Average IOPS',
     
   ];

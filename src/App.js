@@ -12,11 +12,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<UploadPage />} />/ */}
-          {/* <Route path="/" element={<FileUploadComponent />} />
-          <Route path="/homepage" element={<HomePage />} /> */}
-          <Route path='/' element={<FileUploadComponent />} />
-        <Route path='/result' element={<ResultPage />} />
-        <Route path='/secondpage' element={<SecondPage />} />
+          {/* <Route path="/" element={<FileUploadComponent />} /> */}
+          {/* <Route path="/" element={<HomePage />} />  */}
+          <Route path='/fileuploadcomponent' element={<FileUploadComponent />} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='/secondpage' element={<SecondPage />} />
         </Routes>
       </BrowserRouter>
       
