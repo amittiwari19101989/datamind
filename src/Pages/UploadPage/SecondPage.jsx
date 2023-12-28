@@ -26,35 +26,58 @@ const SecondPage = () => {
           <div className='custContainer'>
           <div className='hostCountTableSec'>
             <div className='hostCountTable'>              
-              <h2 className='tableHeading'>Host Data</h2>
+              <h2 className='tableHeading'>Existing Clusters on Host</h2>
               <table>
                 <thead>
                   <tr>
+                    <th>VM ID</th>
                     <th>Host</th>
-                    <th>Count</th>
-                    <th>Total Cost</th>
+                    <th>RAM</th>
+                    <th>Storage</th>
+                    <th>Storage Utilization</th>
+                    <th>Cost</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
+                    <td>VM1</td>
                     <td>AWS</td>
+                    <td>1</td>
                     <td>10</td>
-                    <td>100$</td>
+                    <td>10 %</td>
+                    <td>$100</td>
                   </tr>
                   <tr>
+                  <td>VM2</td>
                     <td>AWS</td>
+                    <td>1</td>
                     <td>10</td>
-                    <td>130$</td>
+                    <td>10 %</td>
+                    <td>$100</td>
                   </tr>
                   <tr>
+                  <td>VM3</td>
                     <td>AWS</td>
-                    <td>15</td>
-                    <td>120$</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>10 %</td>
+                    <td>$100</td>
                   </tr>
                   <tr>
+                  <td>VM4</td>
                     <td>AWS</td>
-                    <td>9</td>
-                    <td>80$</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>10 %</td>
+                    <td>$100</td>
+                  </tr>
+                  <tr>
+                  <td>VM5</td>
+                    <td>AWS</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>10 %</td>
+                    <td>$100</td>
                   </tr>
                 </tbody>
               </table>
@@ -68,35 +91,46 @@ const SecondPage = () => {
             <Row>
               <Col md={6}>
               <div className='hostCountTable'>              
-                <h2 className='tableHeading'>Host Data</h2>
+                <h2 className='tableHeading'>RightSizing Within Hosts</h2>
                 <table>
                   <thead>
                     <tr>
-                      <th>Host</th>
-                      <th>Count</th>
-                      <th>Total Cost</th>
+                      <th>VM ID</th>
+                      <th>Updated Ram</th>
+                      <th>Updated Storage</th>
+                      <th>Updated Cost</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>AWS</td>
+                      <td>Vm1</td>
+                      <td>1</td>
+                      <td>5</td>
+                      <td>$100</td>
+                    </tr>
+                    <tr>
+                      <td>Vm1</td>
+                      <td>6</td>
+                      <td>5</td>
+                      <td>$100</td>
+                    </tr>
+                    <tr>
+                      <td>Vm1</td>
+                      <td>20</td>
+                      <td>5</td>
+                      <td>$100</td>
+                    </tr>
+                    <tr>
+                      <td>Vm1</td>
                       <td>10</td>
-                      <td>100$</td>
+                      <td>6</td>
+                      <td>$100</td>
                     </tr>
                     <tr>
-                      <td>AWS</td>
+                      <td>Vm1</td>
                       <td>10</td>
-                      <td>130$</td>
-                    </tr>
-                    <tr>
-                      <td>AWS</td>
-                      <td>15</td>
-                      <td>120$</td>
-                    </tr>
-                    <tr>
-                      <td>AWS</td>
-                      <td>9</td>
-                      <td>80$</td>
+                      <td>8</td>
+                      <td>$100</td>
                     </tr>
                   </tbody>
                 </table>
@@ -104,35 +138,40 @@ const SecondPage = () => {
               </Col>
               <Col md={6}>
               <div className='hostCountTable'>              
-              <h2 className='tableHeading'>Host Data</h2>
+              <h2 className='tableHeading'>RightSizing Across Hosts</h2>
               <table>
                 <thead>
                   <tr>
-                    <th>Host</th>
-                    <th>Count</th>
-                    <th>Total Cost</th>
+                  <th>VM ID</th>
+                      <th>Recommendated Host</th>
+                      <th>Updated Cost</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>AWS</td>
-                    <td>10</td>
-                    <td>100$</td>
+                    <td>VM1</td>
+                    <td>GCP</td>
+                    <td>$100</td>
                   </tr>
                   <tr>
-                    <td>AWS</td>
-                    <td>10</td>
-                    <td>130$</td>
+                  <td>VM1</td>
+                    <td>On Premise</td>
+                    <td>$100</td>
                   </tr>
                   <tr>
-                    <td>AWS</td>
-                    <td>15</td>
-                    <td>120$</td>
+                  <td>VM1</td>
+                    <td>On Premise</td>
+                    <td>$100</td>
                   </tr>
                   <tr>
-                    <td>AWS</td>
-                    <td>9</td>
-                    <td>80$</td>
+                  <td>VM1</td>
+                    <td>On Premise</td>
+                    <td>$100</td>
+                  </tr>
+                  <tr>
+                  <td>VM1</td>
+                    <td>On Premise</td>
+                    <td>$100</td>
                   </tr>
                 </tbody>
               </table>
@@ -155,7 +194,7 @@ const SecondPage = () => {
                       <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
                       <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
                       <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
-                      
+                      <li><span className='iconsSec'><IoMdCheckmarkCircleOutline /> </span> <span>vm id reduce ram to 4</span></li>
                     </ul>
                 </div>
               </div>
