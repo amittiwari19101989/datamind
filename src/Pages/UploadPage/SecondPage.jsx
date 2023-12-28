@@ -112,7 +112,7 @@ const SecondPage = () => {
                   <YAxis />
                   <Tooltip />
                   <Legend />
-                  <Bar dataKey="totalcost" fill="#2C71AA" activeBar={<Rectangle fill="red"  />} />
+                  <Bar dataKey="totalcost" fill="#2C71AA" activeBar={<Rectangle fill="#81b8e5"  />} />
                   <Bar dataKey="whenmove" fill="#8F5D8E" activeBar={<Rectangle fill="gold" />} />
                   <Bar dataKey="whennotmove" fill="#C9305C" activeBar={<Rectangle fill="blue"  />} />
                 </BarChart>
