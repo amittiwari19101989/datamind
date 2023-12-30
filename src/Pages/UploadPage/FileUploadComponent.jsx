@@ -27,7 +27,9 @@ const FileUploadComponent = () => {
     })
     .then((res) => res.json())
     .then((resp) => {
-      if (resp && resp.first_page_data && resp.second_page_data) {
+      if (resp && resp.first_page_data 
+        // && resp.second_page_data
+        ) {
         const parsedData = resp.first_page_data;
         setTableData(parsedData);
         console.log(parsedData);
