@@ -4,20 +4,22 @@ import "./style.css";
 import video from "../../assets/bg.mp4"
 import { Link } from 'react-router-dom';
 import { PieChart, Pie, Tooltip } from "recharts";
+import Header from '../../component/Header/Header';
+import Footer from '../../component/Header/Footer';
 
 
 const ResultPage = ({ tableData }) => {
     const data = [
-      { name: "AWS", count: 400 ,fill: '#57c0e8'},
-      { name: "GCP", count: 700, fill: "#FF6565" },
-      { name: "On Prem", count: 200 ,fill: "#e69138"},
-      { name: "Azure", count: 1000 ,fill: "purple"},
+      { name: "AWS", count: 400 ,fill: '#83af34'},
+      { name: "GCP", count: 700, fill: "#ea1b3d" },
+      { name: "On Prem", count: 200 ,fill: "#5b6dd9"},
+      { name: "Azure", count: 1000 ,fill: "#477ba8"},
       ];
       const cost = [
-        { name: "AWS", price: 400 ,fill: '#57c0e8'},
-        { name: "GCP", price: 700, fill: "#FF6565" },
-        { name: "On Prem", price: 200 ,fill: "#e69138"},
-        { name: "Azure", price: 1000 ,fill: "purple"},
+        { name: "AWS", price: 400 ,fill: '#83af34'},
+        { name: "GCP", price: 700, fill: "#ea1b3d" },
+        { name: "On Prem", price: 200 ,fill: "#5b6dd9"},
+        { name: "Azure", price: 1000 ,fill: "#477ba8"},
       ];
 
     const [firstTableData, setFirstTableData] = useState(tableData)
@@ -26,24 +28,25 @@ const ResultPage = ({ tableData }) => {
 
   return (
     <>
-      <div className="main-wrapper" >
-        <div class="custom-layout-video-section">
+      <Header />
+      <div className="container pt-3 pb-3">
+        {/* <div class="custom-layout-video-section">
           <div className='video-sec custom-video-section'>
-            {/* <video className='' autoPlay loop muted>
+            <video className='' autoPlay loop muted>
                 <source src={video} type='video/mp4' />            
-            </video>   */}
+            </video>  
           </div>
-        </div>
+        </div> */}
         {/* <pre>{JSON.stringify(tableData.first_page_data, null, 2)}</pre> */}
         <div className='FirstPage'>
           {/* <video src={video}></video> */}
           <div className='firstPageSec'>
             <div className='container-sec'>
-              <div className='firstPageContent'>
-                <div className='hostCountTableSec'>
-                  <div className='hostCountTable'>
-                    <h2 className='tableHeading'>Host Data</h2>
-                    <table>
+              <div className='firstPageContent-row row'>
+                <div className='hostCountTableSec col-6 offset-3'>
+                  <div className='m-custom-hostCountTable'>
+                    <h2 className='tableHeading'>Host <span className='text-red'>Data</span></h2>
+                    <table className='m-custom-table'>
                       <thead>
                         <tr>
                           <th>Host</th>
@@ -66,12 +69,14 @@ const ResultPage = ({ tableData }) => {
                     </table>
                   </div>
                 </div>
-                <div className='chartSec'>              
-                  <div className='chartData'>                
-                    <h3 className='chartHeading'>
+                <div className='chartSec row'>  
+                  <div className='col-10 offset-1 chartData-custom-parent'>            
+                  <div className='chartData-custom'> 
+                    <h2 className='tableHeading'>Current Host <span className='text-red'>Wise VMS</span></h2>               
+                    {/* <h3 className='chartHeading-custom'>
                         Current Host Wise VMS
-                    </h3>
-                    <PieChart width={450} height={250}>
+                    </h3> */}
+                    <PieChart width={450} height={250} className='pieChart-custom'>
                         <Tooltip />
                         <Pie
                             data={data}
@@ -85,11 +90,12 @@ const ResultPage = ({ tableData }) => {
                         />
                     </PieChart>
                   </div>
-                  <div className='chartData'>                
-                      <h3 className='chartHeading'>
+                  <div className='chartData-custom'> 
+                      <h2 className='tableHeading'>Current Host <span className='text-red'>Wise Cost</span></h2>               
+                      {/* <h3 className='chartHeading-custom'>
                           Current Host Wise Cost
-                      </h3>
-                      <PieChart width={450} height={250}>
+                      </h3> */}
+                      <PieChart width={450} height={250} className='pieChart-custom'>
                           <Tooltip />
                           <Pie
                               data={cost}
@@ -103,13 +109,14 @@ const ResultPage = ({ tableData }) => {
                           />
                       </PieChart>
                   </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-       
+       <Footer />
     </>
   );
 };
