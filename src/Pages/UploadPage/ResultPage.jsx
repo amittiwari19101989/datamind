@@ -9,22 +9,33 @@ import Footer from '../../component/Header/Footer';
 
 
 const ResultPage = ({ tableData }) => {
-    const data = [
-      { name: "AWS", count: 400 ,fill: '#83af34'},
-      { name: "GCP", count: 700, fill: "#ea1b3d" },
-      { name: "On Prem", count: 200 ,fill: "#5b6dd9"},
-      { name: "Azure", count: 1000 ,fill: "#477ba8"},
-      ];
-      const cost = [
-        { name: "AWS", price: 400 ,fill: '#83af34'},
-        { name: "GCP", price: 700, fill: "#ea1b3d" },
-        { name: "On Prem", price: 200 ,fill: "#5b6dd9"},
-        { name: "Azure", price: 1000 ,fill: "#477ba8"},
-      ];
-
     const [firstTableData, setFirstTableData] = useState(tableData)
+  
 
-    console.log("tableData",tableData)
+    const data = Object.entries(firstTableData.cloud_count).map(([name, value], index) => ({
+      name,
+      value,
+      fill: ['#57c0e8', '#FF6565', '#e69138'][index]
+    }));
+
+    const costdata = Object.entries(firstTableData.cloud_total_cost).map(([name, cost], index) => ({
+      name,
+      cost,
+      fill: ['#e69138','#57c0e8', '#FF6565' ][index]
+    }));  
+    
+
+    console.log("cost",costdata)
+    
+      // const cost = [
+      //   { name: "AWS", price: 400 ,fill: '#57c0e8'},
+      //   { name: "GCP", price: 700, fill: "#FF6565" },
+      //   { name: "On Prem", price: 200 ,fill: "#e69138"},
+      //   { name: "Azure", price: 1000 ,fill: "purple"},
+      // ];
+
+
+    
 
   return (
     <>
@@ -80,13 +91,12 @@ const ResultPage = ({ tableData }) => {
                         <Tooltip />
                         <Pie
                             data={data}
-                            dataKey="count"
+                            dataKey="value"
                             outerRadius={100}
                             innerRadius={50}
                           // fill={data.colo}}
-                            label={({ name, count }) =>
-                                `${name}: ${count}`
-                            }
+                          label={({ name, value }) => `${name}: ${value}`}
+                          fill={data.map(item => item.fill)}
                         />
                     </PieChart>
                   </div>
@@ -98,14 +108,15 @@ const ResultPage = ({ tableData }) => {
                       <PieChart width={450} height={250} className='pieChart-custom'>
                           <Tooltip />
                           <Pie
-                              data={cost}
-                              dataKey="price"
+                              data={costdata}
+                              dataKey="cost"
                               outerRadius={100}
                             innerRadius={50}
                               //fill="green"
-                              label={({ name, price }) =>
-                                  `${name}: ${price}`
+                              label={({ name, cost }) =>
+                                  `${name}: ${cost}`
                               }
+                              fill={costdata.map(item => item.fill)}
                           />
                       </PieChart>
                   </div>
