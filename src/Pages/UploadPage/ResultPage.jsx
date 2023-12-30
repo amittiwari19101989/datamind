@@ -15,13 +15,13 @@ const ResultPage = ({ tableData }) => {
     const data = Object.entries(firstTableData.cloud_count).map(([name, value], index) => ({
       name,
       value,
-      fill: ['#57c0e8', '#FF6565', '#e69138'][index]
+      fill: ['#83af34', '#ea1b3d', '#5b6dd9'][index]
     }));
 
     const costdata = Object.entries(firstTableData.cloud_total_cost).map(([name, cost], index) => ({
       name,
       cost,
-      fill: ['#e69138','#57c0e8', '#FF6565' ][index]
+      fill: ['#83af34','#ea1b3d', '#5b6dd9' ][index]
     }));  
     
 
