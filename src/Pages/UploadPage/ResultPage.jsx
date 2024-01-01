@@ -65,7 +65,7 @@ const ResultPage = ({ tableData }) => {
                             </td>
                             <td>{count}</td>
                             {/* Assuming the cloud_total_cost object has the same structure */}
-                            <td>{firstTableData.cloud_total_cost[host]}</td>
+                            <td>${Math.floor(firstTableData.cloud_total_cost[host])}</td>
                           </tr>
                         ))}
                       </tbody>
