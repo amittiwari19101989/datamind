@@ -33,7 +33,7 @@ const FileUploadComponent = () => {
         const parsedData = resp.first_page_data;
         setTableData(parsedData);
         console.log(parsedData);
-    
+        console.log(tableData);
         // Navigate to the ResultPage with tableData
         navigate('/', { state: { tableData: parsedData } });
       } else {

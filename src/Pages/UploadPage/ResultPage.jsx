@@ -10,8 +10,8 @@ import Footer from '../../component/Header/Footer';
 
 const ResultPage = ({ tableData }) => {
     const [firstTableData, setFirstTableData] = useState(tableData)
-  
-
+   
+    console.log("cost",tableData)
     const data = Object.entries(firstTableData.cloud_count).map(([name, value], index) => ({
       name,
       value,
