@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from "../../assets/logo.svg"
+import logo from "../../assets/logo.svg";
+import ibLogo from "../../assets/black-ib-logo.png"
 import "./style.css";
 
 const Header = () => {
@@ -12,7 +13,7 @@ const Header = () => {
                 <div className='m-header-parent'>
                   <img src={logo} alt="datamind" className='datamind-logo'/>
                   <span>Data Mind: <span className='text-red'> AI Storage Optimizer </span></span>
-                  <img className='ib-logo' src='https://lh4.googleusercontent.com/5gWomdwZnzTT5kjYPNLNMZRGNa7zhUyROskgaZtTtIlDEOQdXqvEQRUIBZ65mA3wNgGl3V4bA8_1iPlIJykvf8Y=w16383' alt='InfoBeans' />
+                  <img className='ib-logo' src={ibLogo} alt='InfoBeans' />
                 </div>
               </div>
             </div>
