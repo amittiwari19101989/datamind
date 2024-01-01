@@ -13,10 +13,12 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<UploadPage />} />/ */}
           {/* <Route path="/" element={<FileUploadComponent />} /> */}
-          {/* <Route path="/" element={<HomePage />} />  */}
+          <Route path="/" element={<HomePage />} /> 
           <Route path='/fileuploadcomponent' element={<FileUploadComponent />} />
-          <Route path='/' element={<HomePage />} />
-          <Route path='/secondpage' element={<SecondPage />} />
+          {/* <Route path='/result' element={<ResultPage />} /> */}
+
+          {/* <Route path='/secondpage' element={<SecondPage />} /> */}
+          <Route path="/secondpage/:host" element={<SecondPage />} />
         </Routes>
       </BrowserRouter>
       

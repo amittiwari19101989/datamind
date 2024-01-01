@@ -27,15 +27,14 @@ const FileUploadComponent = () => {
     })
     .then((res) => res.json())
     .then((resp) => {
-      if (resp && resp.first_page_data 
-        // && resp.second_page_data
-        ) {
-        const parsedData = resp.first_page_data;
+      if (resp && resp.first_page_data) {
+        const parsedData = resp.first_page_data ;
         setTableData(parsedData);
         console.log(parsedData);
-    
+        console.log(tableData);
         // Navigate to the ResultPage with tableData
         navigate('/', { state: { tableData: parsedData } });
+        // navigate('/result', { state: { tableData: parsedData } });
       } else {
         console.log('Invalid server response:', resp);
         // Handle the case where the response is not as expected
