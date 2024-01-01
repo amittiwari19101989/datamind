@@ -2,11 +2,18 @@
 import React, { useState } from 'react';
 import "./style.css";
 import video from "../../assets/bg.mp4"
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { PieChart, Pie, Tooltip } from "recharts";
 
 
+
 const ResultPage = ({ tableData }) => {
+
+    // const location = useLocation();
+    // const tableData = location.state
+
+    console.log(" table data from reul page",tableData)// table data from reul page
+
     const [firstTableData, setFirstTableData] = useState(tableData)
   
 

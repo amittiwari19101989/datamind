@@ -18,6 +18,7 @@ const HomePage = () => {
           {/* <Header /> */}
         
               <ResultPage tableData={tableData}/>
+              {/* <ResultPage /> */}
               {/* <Table /> */}
             
         </div>  
