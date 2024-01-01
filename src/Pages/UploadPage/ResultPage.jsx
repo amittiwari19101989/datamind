@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import "./style.css";
 import video from "../../assets/bg.mp4"
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { PieChart, Pie, Tooltip } from "recharts";
 import Header from '../../component/Header/Header';
 import Footer from '../../component/Header/Footer';
@@ -11,6 +11,7 @@ import Footer from '../../component/Header/Footer';
 
 const ResultPage = ({ tableData }) => {
 
+  const history = useNavigate();
     // const location = useLocation();
     // const tableData = location.state
 
@@ -32,32 +33,15 @@ const ResultPage = ({ tableData }) => {
     }));  
     
 
-    console.log("cost",costdata)
-    
-      // const cost = [
-      //   { name: "AWS", price: 400 ,fill: '#57c0e8'},
-      //   { name: "GCP", price: 700, fill: "#FF6565" },
-      //   { name: "On Prem", price: 200 ,fill: "#e69138"},
-      //   { name: "Azure", price: 1000 ,fill: "purple"},
-      // ];
-
-
-    
+    console.log("cost",costdata) 
 
   return (
     <>
       <Header />
       <div className="container pt-3 pb-3">
-        {/* <div class="custom-layout-video-section">
-          <div className='video-sec custom-video-section'>
-            <video className='' autoPlay loop muted>
-                <source src={video} type='video/mp4' />            
-            </video>  
-          </div>
-        </div> */}
+       
         {/* <pre>{JSON.stringify(tableData.first_page_data, null, 2)}</pre> */}
         <div className='FirstPage'>
-          {/* <video src={video}></video> */}
           <div className='firstPageSec'>
             <div className='container-sec'>
               <div className='firstPageContent-row row'>
@@ -76,7 +60,8 @@ const ResultPage = ({ tableData }) => {
                         {Object.entries(firstTableData.cloud_count).map(([host, count]) => (
                           <tr key={host}>
                             <td>
-                              <Link to="/secondpage">{host}</Link>
+                            <Link className='hostName' to={`/secondpage/${host}`}>{host}</Link>
+                              {/* {console.log("host-check", host)} */}
                             </td>
                             <td>{count}</td>
                             {/* Assuming the cloud_total_cost object has the same structure */}

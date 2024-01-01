@@ -17,7 +17,8 @@ function App() {
           <Route path='/fileuploadcomponent' element={<FileUploadComponent />} />
           {/* <Route path='/result' element={<ResultPage />} /> */}
 
-          <Route path='/secondpage' element={<SecondPage />} />
+          {/* <Route path='/secondpage' element={<SecondPage />} /> */}
+          <Route path="/secondpage/:host" element={<SecondPage />} />
         </Routes>
       </BrowserRouter>
       
