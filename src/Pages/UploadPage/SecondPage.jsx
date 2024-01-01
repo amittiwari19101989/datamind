@@ -46,7 +46,7 @@ function CloudMovementTable() {
     setError(null);
 
     try {
-      const response = await axios.get('http://localhost:3500/api/predict/aws/right_size'); // Replace with your endpoint
+      const response = await axios.get(`http://localhost:3500/api/predict/${formattedHost}/right_size`); // Replace with your endpoint
       setRightData(response.data.cloud_right_size_table); // Access the specific data array
       setsuggestionslist(response.data.suggestions_list.right_sized_vm);
       setmovedvmlist(response.data.suggestions_list.moved_vm_data);
