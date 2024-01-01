@@ -18,8 +18,8 @@ const ResultPage = ({ tableData }) => {
     console.log(" table data from reul page",tableData)// table data from reul page
 
     const [firstTableData, setFirstTableData] = useState(tableData)
-  
-
+   
+    console.log("cost",tableData)
     const data = Object.entries(firstTableData.cloud_count).map(([name, value], index) => ({
       name,
       value,
