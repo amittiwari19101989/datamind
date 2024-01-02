@@ -102,16 +102,16 @@ function CloudMovementTable() {
               <button onClick={fetchData}>Right Sizing</button>
             </div>
             
-            <div className='updatedTable'>
+            <div className=''>
               {isLoading && <p>Loading...</p>}
               {error && <p>Error: {error.message}</p>}
               {rightdata.length > 0 && (
                 <Row>
                   <Col md={6}>
-                    <div className='hostCountTable'>
+                    <div className='m-custom-hostCountTable'>
 
-                      <h2 className='tableHeading'>RightSizing Within Hosts</h2>
-                      <table>
+                      <h2 className='tableHeading'>RightSizing <span className='text-red'>Within Hosts</span></h2>
+                      <table className='m-custom-table'>
                         <thead>
                           <tr>
                             <th>id</th>
@@ -143,9 +143,9 @@ function CloudMovementTable() {
                     </div>
                   </Col>
                   <Col md={6}>
-                    <div className='hostCountTable'>
-                      <h2 className='tableHeading'>RightSizing Across Hosts</h2>
-                      <table>
+                    <div className='m-custom-hostCountTable'>
+                      <h2 className='tableHeading'>RightSizing <span className='text-red'> Across Hosts</span></h2>
+                      <table className='m-custom-table'>
                         <thead>
                           <tr>
                             <th>VM ID</th>
