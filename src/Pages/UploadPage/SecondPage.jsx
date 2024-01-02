@@ -180,7 +180,7 @@ function CloudMovementTable() {
             {suggestionslist.length > 0 && 
                 <div className='leftList'>
                   <div className='costList'>
-                      <h2 className='tableHeading'>When not moving then <span className='text-red'> right size cost</span></h2>
+                      <h2 className='tableHeading'>RightSizing Within Host <span className='text-red'> Recommendations</span></h2>
                       <ul className='m-costListSec'>
                       {suggestionslist.map((suggestion, index) => (
                         <li key={index}><span className='iconsSec'><IoMdCheckmarkCircleOutline/> </span> <span className='listcontent'>{suggestion}</span></li>
@@ -195,7 +195,7 @@ function CloudMovementTable() {
                   <BarChart
                       width={500}
                       height={300}
-                      data={data}
+                      data={graphdata}
                       margin={{
                         top: 5,
                         right: 30,
@@ -218,7 +218,7 @@ function CloudMovementTable() {
                 {movedvmList.length > 0 && 
                 <div className='leftList'>
                   <div className='costList'>
-                      <h2 className='tableHeading'>When not moving then <span className='text-red'> right size cost</span></h2>
+                      <h2 className='tableHeading'>RightSizing Across Hosts <span className='text-red'>Recommendations</span></h2>
                       <ul className='m-costListSec'>
                       {movedvmList.map((suggestion, index) => (
                         <li key={index}><span className='iconsSec'><IoMdCheckmarkCircleOutline/></span> <span className='listcontent'>{suggestion}</span></li>
