@@ -1,5 +1,5 @@
 // ResultPage.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./style.css";
 import video from "../../assets/bg.mp4"
 import { Link, useNavigate } from 'react-router-dom';
@@ -10,24 +10,46 @@ import Sidebar from '../../component/Header/sidebar';
 
 
 
-const ResultPage = ({ tableData }) => {
+const ResultPage = () => {
+  const formData = new FormData();
+
+  const [firstTableData, setFirstTableData] = useState("")
 
   const history = useNavigate();
     // const location = useLocation();
     // const tableData = location.state
 
-    console.log(" table data from reul page",tableData)// table data from reul page
+    useEffect(() => {
+      fetch('http://127.0.0.1:3500/api/predict', {
+        method: 'POST',
+        body: formData,
+      })
+      .then((res) => res.json())
+      .then((resp) => {
+        if (resp && resp.first_page_data) {
+          const parsedData = resp.first_page_data ;
+          setFirstTableData(parsedData);
+          console.log("parsedData", parsedData);
+          // console.log("tableData", tableData);         
+        } else {
+          console.log('Invalid server response:', resp);
+          // Handle the case where the response is not as expected
+        }
+      })
+    .catch((err) => {
+      console.log('err: ', err);
+    });
+       
+    }, []);
 
-    const [firstTableData, setFirstTableData] = useState(tableData)
    
-    console.log("cost",tableData)
-    const data = Object.entries(firstTableData.cloud_count).map(([name, value], index) => ({
+    const data = Object.entries(firstTableData.cloud_count || {}).map(([name, value], index) => ({
       name,
       value,
       fill: ['#83af34', '#ea1b3d', '#5b6dd9'][index]
     }));
 
-    const costdata = Object.entries(firstTableData.cloud_total_cost).map(([name, cost], index) => ({
+    const costdata = Object.entries(firstTableData.cloud_total_cost || {}).map(([name, cost], index) => ({
       name,
       cost,
       fill: ['#83af34','#ea1b3d', '#5b6dd9' ][index]
@@ -72,7 +94,7 @@ const ResultPage = ({ tableData }) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {Object.entries(firstTableData.cloud_count).map(([host, count]) => (
+                        {Object.entries(firstTableData.cloud_count || {}).map(([host, count]) => (
                           <tr key={host}>
                             <td>
                               {
