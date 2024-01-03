@@ -36,7 +36,11 @@ function CloudMovementTable() {
     fetch(`http://127.0.0.1:3500/api/predict/${formattedHost}`)
       .then(response => response.json())
       .then(fetchedData => {setData(fetchedData.cloud_movement_table)
-        console.log("fetchedData.cloud_movement_table", fetchedData.cloud_movement_table)
+        console.log("fetchedData.cloud_movement_table", fetchedData.cloud_movement_table);
+        setRightData([]);
+        setsuggestionslist([]);
+        setmovedvmlist([]);
+        setgraphdata({});
       })
       .catch(error => console.error('Error fetching data:', error));
   }, [host]);

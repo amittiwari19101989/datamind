@@ -32,6 +32,12 @@ const ResultPage = ({ tableData }) => {
       cost,
       fill: ['#83af34','#ea1b3d', '#5b6dd9' ][index]
     }));  
+
+    const iconsData = {
+      "AWS":"amazon",
+      "GCP":"cloud-check-fill",
+      "On-prem":"database-fill",
+    }
     
 
     console.log("cost",costdata) 
@@ -68,7 +74,11 @@ const ResultPage = ({ tableData }) => {
                       <tbody>
                         {Object.entries(firstTableData.cloud_count).map(([host, count]) => (
                           <tr key={host}>
-                            <td><i class="bi bi-speedometer2"></i></td>
+                            <td>
+                              {
+                                iconsData[host] &&  <i className={`text-red-icons bi bi-${iconsData[host]}`}></i>
+                              }
+                              </td>
                             <td>
                             <Link className='hostName' to={`/optimizer/${host}`}>{host}</Link>
                               {/* {console.log("host-check", host)} */}
