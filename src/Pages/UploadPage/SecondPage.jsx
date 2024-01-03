@@ -193,9 +193,9 @@ function CloudMovementTable() {
                 <div className='graphSec'>
                 <h2 className='tableHeading mb-4 text-center'>Graph <span className='text-red'> data</span></h2>
                   <BarChart
-                      width={500}
+                      width={400}
                       height={300}
-                      data={data}
+                      data={graphdata}
                       margin={{
                         top: 5,
                         right: 30,
