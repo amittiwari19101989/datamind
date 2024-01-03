@@ -340,7 +340,7 @@
     color: #fff;
 }
 .m-custom-table thead tr th {
-    font-size: 16px;
+    font-size: 14px;
     padding: 5px 5px;
     letter-spacing: 0.5px;
     text-align: center;
@@ -439,6 +439,7 @@ span.text-red {
 .rightSizingBtn button {
     box-shadow: 2px -3px 12px 8px rgba(55,55,66,.04), 4px 18px 20px 0 rgba(0,0,0,.09), 0 7px 14px 0 rgba(55,55,66,.04);
     transition: all 0.6s ease;
+    border: 1px solid #ea1b3d;
 }
 .rightSizingBtn button:hover {
     transition: all 0.6s ease;

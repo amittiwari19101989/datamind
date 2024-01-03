@@ -107,7 +107,7 @@ function CloudMovementTable() {
               {error && <p>Error: {error.message}</p>}
               {rightdata.length > 0 && (
                 <Row>
-                  <Col md={6}>
+                  <Col md={8}>
                     <div className='m-custom-hostCountTable'>
 
                       <h2 className='tableHeading'>RightSizing <span className='text-red'>Within Hosts</span></h2>
@@ -142,7 +142,7 @@ function CloudMovementTable() {
 
                     </div>
                   </Col>
-                  <Col md={6}>
+                  <Col md={4}>
                     <div className='m-custom-hostCountTable'>
                       <h2 className='tableHeading'>RightSizing <span className='text-red'> Across Hosts</span></h2>
                       <table className='m-custom-table'>
