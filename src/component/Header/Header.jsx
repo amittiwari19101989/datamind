@@ -11,8 +11,8 @@ const Header = () => {
             <div className='row'>
               <div className='col-12'>
                 <div className='m-header-parent'>
-                  <img src={logo} alt="datamind" className='datamind-logo'/>
-                  <span>Data Mind: <span className='text-red'> AI Storage Optimizer </span></span>
+                  <span><img src={logo} alt="datamind" className='datamind-logo'/><span className='text-red'> AI Storage Optimizer </span></span>
+                  
                   <img className='ib-logo' src={ibLogo} alt='InfoBeans' />
                 </div>
               </div>
