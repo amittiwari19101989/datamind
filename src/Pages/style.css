@@ -31,3 +31,74 @@
     top: 0;
     left: 0;
 }
+
+.m-custom-layout-section {
+    display: flex;
+}
+.m-sidebar-section {
+    width: 15%;
+    z-index: 1;
+    background: red;
+    min-height: 100%;
+}
+.m-custom-root {
+    width: 85%;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 2px #000;
+    border-top: 3px solid red;
+}
+.m-sidebar-parent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.m-sidebar-logo {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #ea1b3d;
+}
+.m-sidebar-logo img.datamind-logo {
+    padding: 5px 0;
+    max-width: 110px;
+}
+.m-sidebar-list-section {
+    width: 90%;
+    padding: 20px 0;
+}
+.m-sidebar-list-section ul {
+    list-style: none;
+    padding: 0;
+}
+.m-sidebar-list-section ul li {
+    /* padding: 5px 0; */
+}
+.m-sidebar-list-section ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    font-size: 22px;
+    line-height: 30px;
+    transition: all 0.6s ease;
+    display: block;
+    padding: 10px 0;
+    border-left: 4px solid transparent;
+    padding-left: 20px;
+    margin: 5px 0;
+    background-color: transparent;
+}
+.m-sidebar-list-section ul li a:hover {
+    background-color: #eee;
+    border-color: #ea1b3d;
+    transition: all 0.6s ease;
+    color: #ea1b3d;
+}

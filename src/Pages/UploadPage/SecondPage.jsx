@@ -7,6 +7,7 @@ import Header from '../../component/Header/Header';
 import { Col, Row } from 'react-bootstrap';
 import Footer from '../../component/Header/Footer';
 import { useParams } from 'react-router-dom';
+import Sidebar from '../../component/Header/sidebar';
 
 
 function CloudMovementTable() {
@@ -63,6 +64,13 @@ function CloudMovementTable() {
 
   return (
     <>
+      <div class="m-custom-layout-section">
+      <div class="m-sidebar-section">
+        <div id="sidebar">
+          <Sidebar />
+        </div>
+      </div>
+      <div className='m-custom-root'>
         <Header />
         <div className='second-page-parent-section'>
           {/* <Header /> */}
@@ -107,8 +115,8 @@ function CloudMovementTable() {
               {error && <p>Error: {error.message}</p>}
               {rightdata.length > 0 && (
                 <Row>
-                  <Col md={6}>
-                    <div className='m-custom-hostCountTable'>
+                  <Col md={7}>
+                    <div className='m-custom-hostCountTable min-height-295'>
 
                       <h2 className='tableHeading'>RightSizing <span className='text-red'>Within Hosts</span></h2>
                       <table className='m-custom-table'>
@@ -142,8 +150,8 @@ function CloudMovementTable() {
 
                     </div>
                   </Col>
-                  <Col md={6}>
-                    <div className='m-custom-hostCountTable'>
+                  <Col md={5}>
+                    <div className='m-custom-hostCountTable min-height-295'>
                       <h2 className='tableHeading'>RightSizing <span className='text-red'> Across Hosts</span></h2>
                       <table className='m-custom-table'>
                         <thead>
@@ -178,7 +186,7 @@ function CloudMovementTable() {
               
 
             {suggestionslist.length > 0 && 
-                <div className='leftList'>
+                <div className='leftList min-height-355'>
                   <div className='costList'>
                       <h2 className='tableHeading'>RightSizing Within Host <span className='text-red'> Recommendations</span></h2>
                       <ul className='m-costListSec'>
@@ -216,7 +224,7 @@ function CloudMovementTable() {
                 </div>
               }
                 {movedvmList.length > 0 && 
-                <div className='leftList'>
+                <div className='leftList min-height-355'>
                   <div className='costList'>
                       <h2 className='tableHeading'>RightSizing Across Hosts <span className='text-red'>Recommendations</span></h2>
                       <ul className='m-costListSec'>
@@ -234,6 +242,8 @@ function CloudMovementTable() {
         </div>
         </div>
         <Footer />
+        </div>
+        </div>
     </>
   )
 }

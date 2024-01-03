@@ -18,7 +18,7 @@ function App() {
           {/* <Route path='/result' element={<ResultPage />} /> */}
 
           {/* <Route path='/secondpage' element={<SecondPage />} /> */}
-          <Route path="/secondpage/:host" element={<SecondPage />} />
+          <Route path="/optimizer/:host" element={<SecondPage />} />
         </Routes>
       </BrowserRouter>
       

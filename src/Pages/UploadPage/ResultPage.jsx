@@ -60,7 +60,7 @@ const ResultPage = ({ tableData }) => {
                         {Object.entries(firstTableData.cloud_count).map(([host, count]) => (
                           <tr key={host}>
                             <td>
-                            <Link className='hostName' to={`/secondpage/${host}`}>{host}</Link>
+                            <Link className='hostName' to={`/optimizer/${host}`}>{host}</Link>
                               {/* {console.log("host-check", host)} */}
                             </td>
                             <td>{count}</td>
