@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { PieChart, Pie, Tooltip } from "recharts";
 import Header from '../../component/Header/Header';
 import Footer from '../../component/Header/Footer';
+import Sidebar from '../../component/Header/sidebar';
 
 
 
@@ -37,6 +38,13 @@ const ResultPage = ({ tableData }) => {
 
   return (
     <>
+    <div className="m-custom-layout-section">
+      <div className="m-sidebar-section">
+        <div id="sidebar">
+          <Sidebar />
+        </div>
+      </div>
+      <div className='m-custom-root'>
       <Header />
       <div className="container pt-3 pb-3">
        
@@ -120,6 +128,8 @@ const ResultPage = ({ tableData }) => {
         </div>
       </div>
        <Footer />
+       </div>
+       </div>
     </>
   );
 };

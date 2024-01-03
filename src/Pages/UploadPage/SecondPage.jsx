@@ -64,8 +64,8 @@ function CloudMovementTable() {
 
   return (
     <>
-      <div class="m-custom-layout-section">
-      <div class="m-sidebar-section">
+      <div className="m-custom-layout-section">
+      <div className="m-sidebar-section">
         <div id="sidebar">
           <Sidebar />
         </div>
