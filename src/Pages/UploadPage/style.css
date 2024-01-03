@@ -394,7 +394,12 @@ span.text-red {
     margin-bottom: 20px;
     border-radius: 5px;
     transition: all 0.8s ease;
-    margin: 0px 10px;
+    margin-right: 10px;
+    width: 50%;
+}
+.chartData-custom-parent .chartData-custom:last-child {
+    margin-right: 0;
+    margin-left: 10px;
 }
 .pieChart-custom {
     padding: 20px 25px;

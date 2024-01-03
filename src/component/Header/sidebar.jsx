@@ -15,16 +15,16 @@ const Sidebar = () => {
                 <div className='m-sidebar-list-section'>
                     <ul>
                         <li>
-                            <Link to={`/`}>Home</Link>
+                            <Link to={`/`}><i class="bi bi-speedometer2"></i> <span>Home</span></Link>
                         </li>
                         <li>
-                            <Link to={`/optimizer/AWS`}>AWS</Link>
+                            <Link to={`/optimizer/AWS`}><i class="bi bi-amazon"></i> <span> AWS</span></Link>
                         </li>
                         <li>
-                            <Link to={`/optimizer/GCP`}>GCP</Link>
+                            <Link to={`/optimizer/GCP`}><i class="bi bi-cloud-check"></i> <span>GCP</span></Link>
                         </li>
                         <li>
-                            <Link to={`/optimizer/On-prem`}>On-prem</Link>
+                            <Link to={`/optimizer/On-prem`}><i class="bi bi-database"></i> <span>On-prem</span></Link>
                         </li>
                     </ul>
                 </div>

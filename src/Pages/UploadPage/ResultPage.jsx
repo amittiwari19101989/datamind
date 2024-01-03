@@ -53,12 +53,13 @@ const ResultPage = ({ tableData }) => {
           <div className='firstPageSec'>
             <div className='container-sec'>
               <div className='firstPageContent-row row'>
-                <div className='hostCountTableSec col-6 offset-3'>
+                <div className='hostCountTableSec col-10 offset-1'>
                   <div className='m-custom-hostCountTable'>
                     <h2 className='tableHeading'>Host <span className='text-red'>Data</span></h2>
                     <table className='m-custom-table'>
                       <thead>
                         <tr>
+                          <th></th>
                           <th>Host</th>
                           <th>Count</th>
                           <th>Total Cost</th>
@@ -67,6 +68,7 @@ const ResultPage = ({ tableData }) => {
                       <tbody>
                         {Object.entries(firstTableData.cloud_count).map(([host, count]) => (
                           <tr key={host}>
+                            <td><i class="bi bi-speedometer2"></i></td>
                             <td>
                             <Link className='hostName' to={`/optimizer/${host}`}>{host}</Link>
                               {/* {console.log("host-check", host)} */}
@@ -79,8 +81,7 @@ const ResultPage = ({ tableData }) => {
                       </tbody>
                     </table>
                   </div>
-                </div>
-                <div className='chartSec row'>  
+                </div> 
                   <div className='col-10 offset-1 chartData-custom-parent'>            
                   <div className='chartData-custom'> 
                     <h2 className='tableHeading'>Current Host <span className='text-red'>Wise VMS</span></h2>               
@@ -121,7 +122,6 @@ const ResultPage = ({ tableData }) => {
                       </PieChart>
                   </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
